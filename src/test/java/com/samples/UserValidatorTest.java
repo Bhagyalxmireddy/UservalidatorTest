@@ -25,4 +25,25 @@ public class UserValidatorTest {
         boolean result = validator.validateFirstName("bhagya@123");
         Assert.assertFalse(result);
     }
+
+    @Test
+    public void givenEmailAddress_WhenProper_ShouldReturnTure() {
+        UserValidator validator = new UserValidator();
+        boolean result = validator.validateEmailAddress("abc@gamil.com");
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenPostelCode_WhenProper_ShouldReturnTure() {
+        UserValidator validator = new UserValidator();
+        boolean result = validator.validatePotelCode("509 215");
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenPostelCode_WhenNotProper_ShouldReturnFalse() {
+        UserValidator validator = new UserValidator();
+        boolean result = validator.validatePotelCode("a45213");
+        Assert.assertFalse(result);
+    }
 }

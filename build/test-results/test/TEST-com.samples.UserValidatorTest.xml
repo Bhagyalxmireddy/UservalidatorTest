@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.samples.UserValidatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-06T11:37:18" hostname="DESKTOP-25DPEJS" time="0.01">
+<testsuite name="com.samples.UserValidatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-06T12:09:37" hostname="DESKTOP-25DPEJS" time="0.008">
   <properties/>
-  <testcase name="givenFisrtName_WhenNotProper_ShouldReturnFalse" classname="com.samples.UserValidatorTest" time="0.01"/>
+  <testcase name="givenPostelCode_WhenNotProper_ShouldReturnFalse" classname="com.samples.UserValidatorTest" time="0.008"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
