@@ -64,13 +64,6 @@ public class UserValidatorTest {
     }
 
     @Test
-    public void givenEmailAddress_WhenProper_ShouldReturnTure() {
-        UserValidator validator = new UserValidator();
-        boolean result = validator.validateEmailAddress("abc@gamil.com");
-        Assert.assertTrue(result);
-    }
-
-    @Test
     public void givenPostelCode_WhenProper_ShouldReturnTure() {
         UserValidator validator = new UserValidator();
         boolean result = validator.validatePotelCode("509 215");
@@ -94,7 +87,26 @@ public class UserValidatorTest {
         UserValidator validator = new UserValidator();
         boolean result = validator.validatePotelCode("509215");
         Assert.assertTrue(result);
+    } @Test
+    public void givenEmailAddress_WhenProper_ShouldReturnTure() {
+        UserValidator validator = new UserValidator();
+        boolean result = validator.validateEmailAddress("abc@gamil.com");
+        Assert.assertTrue(result);
     }
+    @Test
+    public void givenEmailAddress_WhenHaveSplChar_ShouldReturnFalse() {
+        UserValidator validator = new UserValidator();
+        boolean result = validator.validateEmailAddress("abc@.com");
+        Assert.assertFalse(result);
+    }
+    @Test
+    public void givenEmailAddress_WhenNotProper_ShouldReturnFalse() {
+        UserValidator validator = new UserValidator();
+        boolean result = validator.validateEmailAddress("bhagi(123@in");
+        Assert.assertFalse(result);
+    }
+
+
 
 
 }
